@@ -25,6 +25,8 @@ namespace Humanizer.Localisation.CollectionFormatters
 
         public virtual string Humanize<T>(IEnumerable<T> collection, string separator)
         {
+            // fixes bug #624
+            if (String.IsNullOrEmpty(separator)) return Humanize(collection, o => o?.ToString(), DefaultSeparator); 
             return Humanize(collection, o => o?.ToString(), separator);
         }
 
