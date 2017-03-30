@@ -73,5 +73,13 @@ namespace Humanizer
                 return new ToSentenceCase();
             }
         }
+
+        public static IStringTransformer Acronym
+        {
+            get
+            {
+                return new ToAcronym();
+            }
+        }
     }
 }
