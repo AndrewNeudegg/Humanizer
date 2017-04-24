@@ -119,6 +119,17 @@ namespace Humanizer.Tests
             Assert.Equal("A, B, and C", new[] { "A", "  B  ", "C" }.Humanize(dummyFormatter));
         }
 
+
+        // Custom Test caase checking for bug 624.
+        [Fact]
+        public void HumanizeCorrectlyDetectsEmptyStringParmeter()
+        {
+            // Bug 624 - Passing Humanize("") prevents 'and' from being inserted and instead inserts a double space.
+            Assert.Equal("A, B, and C", new[] { "A", "B", "C" }.Humanize(""));
+        }
+
+
+
         /// <summary>
         /// Use the dummy formatter to ensure tests are testing formatter output rather than input
         /// </summary>
