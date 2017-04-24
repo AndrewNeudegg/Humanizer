@@ -74,6 +74,16 @@ namespace Humanizer
             }
         }
 
+        /// <summary>
+        /// Changes string to acronym case
+        /// </summary>
+        /// <example>
+        /// Punctuation. “Laugh, Out Loud”  “LOL”; “Laugh Out; Loud”  “LOL”.
+        /// Sub clauses. “Laugh (Kind of) Out loud”  “LOL”; “Laugh[1] out loud” ”LOL”.
+        /// Hyphenation. “Laugh Out-loud””LOL”.
+        /// Non-language. “Laugh 2 out loud”  “LOL”.
+        /// All Stop words. “The and yes”  “”.
+        /// </example>
         public static IStringTransformer Acronym
         {
             get
