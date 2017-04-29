@@ -162,6 +162,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)StringExtensionsTests.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)StringHumanizeTests.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)TimeSpanHumanizeTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AcronymTest.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ToQuantityTests.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)TransformersTests.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)TruncatorTests.cs" />
